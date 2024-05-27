@@ -1,0 +1,227 @@
+[
+  {
+    "id": "first",
+    "quizTitle": "React Basics Quiz",
+    "questions": [
+      {
+        "question_id": "q1",
+        "question": "What is the primary purpose of React?",
+        "type": "chose_one",
+        "answers": [
+          {
+            "answer": "To manage and render UI components efficiently",
+            "isCorrect": true
+          },
+          {
+            "answer": "To style UI components",
+            "isCorrect": false
+          },
+          {
+            "answer": "To manage backend services",
+            "isCorrect": false
+          },
+          {
+            "answer": "To handle database operations",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "question_id": "q2",
+        "type": "chose_one",
+        "question": "Which method is used to update the state in a React component?",
+        "answers": [
+          {
+            "answer": "setState",
+            "isCorrect": true
+          },
+          {
+            "answer": "updateState",
+            "isCorrect": false
+          },
+          {
+            "answer": "changeState",
+            "isCorrect": false
+          },
+          {
+            "answer": "modifyState",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "question_id": "q3",
+        "question": "What does JSX stand for?",
+        "type": "chose_one",
+        "answers": [
+          {
+            "answer": "JavaScript XML",
+            "isCorrect": true
+          },
+          {
+            "answer": "JavaScript XSS",
+            "isCorrect": false
+          },
+          {
+            "answer": "JavaScript Extension",
+            "isCorrect": false
+          },
+          {
+            "answer": "JavaScript Expression",
+            "isCorrect": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "second",
+    "quizTitle": "React Intermediate Quiz",
+    "questions": [
+      {
+        "question_id": "q4",
+        "question": "What is a higher-order component (HOC) in React?",
+        "type": "chose_one",
+        "answers": [
+          {
+            "answer": "A function that takes a component and returns a new component",
+            "isCorrect": true
+          },
+          {
+            "answer": "A method to manage component lifecycle",
+            "isCorrect": false
+          },
+          {
+            "answer": "A component that stores global state",
+            "isCorrect": false
+          },
+          {
+            "answer": "A hook for handling side effects",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "question_id": "q5",
+        "question": "Which hook is used to manage state in a functional component?",
+        "type": "chose_one",
+        "answers": [
+          {
+            "answer": "useState",
+            "isCorrect": true
+          },
+          {
+            "answer": "useEffect",
+            "isCorrect": false
+          },
+          {
+            "answer": "useContext",
+            "isCorrect": false
+          },
+          {
+            "answer": "useReducer",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "question_id": "q6",
+        "question": "What is the purpose of React's Context API?",
+        "type": "chose_many",
+        "answers": [
+          {
+            "answer": "To manage and render UI components efficiently",
+            "isCorrect": false
+          },
+          {
+            "answer": "To pass data through the component tree without having to pass props down manually at every level",
+            "isCorrect": true
+          },
+          {
+            "answer": "To handle form validation",
+            "isCorrect": false
+          },
+          {
+            "answer": "To manage component lifecycle methods",
+            "isCorrect": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "third",
+    "quizTitle": "React Advanced Quiz",
+    "questions": [
+      {
+        "question_id": "q7",
+        "question": "What is the difference between useEffect and useLayoutEffect?",
+        "type": "chose_one",
+        "answers": [
+          {
+            "answer": "useEffect runs asynchronously and useLayoutEffect runs synchronously after all DOM mutations",
+            "isCorrect": true
+          },
+          {
+            "answer": "useEffect runs synchronously and useLayoutEffect runs asynchronously",
+            "isCorrect": false
+          },
+          {
+            "answer": "Both hooks run synchronously but useLayoutEffect has higher priority",
+            "isCorrect": false
+          },
+          {
+            "answer": "Both hooks run asynchronously but useEffect runs before DOM mutations",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "question_id": "q8",
+        "question": "What is the purpose of React's useMemo hook?",
+        "type": "chose_one",
+        "answers": [
+          {
+            "answer": "To memorize expensive function results and recompute them only when dependencies change",
+            "isCorrect": true
+          },
+          {
+            "answer": "To manage state in functional components",
+            "isCorrect": false
+          },
+          {
+            "answer": "To handle side effects in functional components",
+            "isCorrect": false
+          },
+          {
+            "answer": "To create a ref object that persists across renders",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "question_id": "q9",
+        "question": "How can you optimize performance in a React application?",
+        "type": "chose_one",
+        "answers": [
+          {
+            "answer": "By using React.memo to prevent unnecessary re-renders",
+            "isCorrect": true
+          },
+          {
+            "answer": "By using higher-order components for all components",
+            "isCorrect": false
+          },
+          {
+            "answer": "By avoiding the use of hooks",
+            "isCorrect": false
+          },
+          {
+            "answer": "By using inline styles exclusively",
+            "isCorrect": false
+          }
+        ]
+      }
+    ]
+  }
+]
