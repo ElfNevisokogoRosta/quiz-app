@@ -13,7 +13,8 @@ interface QuizQuestionProps {
     name: string;
     type: string;
     label: string;
-    answers: { name: string; type: string; label: string }[];
+    value: string;
+    answers: { name: string; type: string; label: string, value: string, isCorrect: boolean }[];
   };
   index: number;
   func: (question: QuestionType, index: string) => void;
@@ -50,7 +51,6 @@ const QuizQuestion: FC<QuizQuestionProps> = ({ question_id, index, question, fun
   const isCorrectHandler = (e: ChangeEvent<HTMLInputElement>, index: number) => {
     const newAnswers = questionData.answers.map((ans, i) => {
       if (typeQ === 'chose_one') {
-        console.log(typeQ);
         return { ...ans, isCorrect: i === index };
       } else {
         return i === index ? { ...ans, isCorrect: e.target.checked } : ans;
@@ -102,9 +102,10 @@ const QuizQuestion: FC<QuizQuestionProps> = ({ question_id, index, question, fun
           <p className="w-full text-right my-3 text-base text-green-400">Correct</p>
         </div>
 
-        {answers.map(({ label, ...rest }, id) => (
+        {answers.map(({ label, value, ...rest }, id) => (
           <div key={`${rest.name}-${id}`} className="flex gap-4">
             <BaseInput
+              defaultValue={value}
               label={`${label} ${id + 1}`}
               onChange={(e) => onAnswerHandler(e, id)}
               value={questionData.answers[id].answer}

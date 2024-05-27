@@ -22,9 +22,7 @@ type BaseNavLinkProps = NavLinkProps & VariantProps<typeof navLinkVariants>;
 
 export const BaseNavLink: FC<BaseNavLinkProps> = ({ className, to, ...rest }) => {
   const location = useLocation();
-  console.log({ location: location.pathname, to });
   const isActiveLink = location.pathname === to;
-
   return (
     <NavLink
       className={cn(

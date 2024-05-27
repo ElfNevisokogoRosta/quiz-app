@@ -60,6 +60,7 @@ export const QuizProvider = ({ children }: { children: ReactNode }) => {
     try {
       await simulateDelay(500);
       const storedQuizzes = getItem('quiz') as QuizType[] | null;
+
       if (!storedQuizzes) {
         throw new Error('Quiz list is not available');
       }

@@ -50,7 +50,6 @@ const QuizQuestion: FC<QuizQuestionProps> = ({ question_id, type, index, questio
   const isCorrectHandler = (e: ChangeEvent<HTMLInputElement>, index: number) => {
     const newAnswers = questionData.answers.map((ans, i) => {
       if (typeQ === 'chose_one') {
-        console.log(typeQ);
         return { ...ans, isCorrect: i === index };
       } else {
         return i === index ? { ...ans, isCorrect: e.target.checked } : ans;

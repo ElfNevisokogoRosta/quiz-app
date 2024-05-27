@@ -15,7 +15,8 @@ interface FormConfigType {
   name: string;
   type: string;
   label: string;
-  answers: { name: string; type: string; label: string }[];
+  value: string;
+  answers: { name: string; type: string; label: string, value: string, isCorrect: boolean }[];
 }
 
 const initialConfigState = [{
@@ -23,26 +24,34 @@ const initialConfigState = [{
   name: 'question',
   type: 'text',
   label: 'Quiz question',
+  value: '',
   answers: [
     {
       name: 'answers',
       type: 'text',
       label: 'Answers',
+      value: '',
+      isCorrect: false,
     },
     {
       name: 'answers',
       type: 'text',
       label: 'Answers',
+      value: '',
+      isCorrect: false,
     },
     {
       name: 'answers',
       type: 'text',
       label: 'Answers',
+      value: '', isCorrect: false,
     },
     {
       name: 'answers',
       type: 'text',
       label: 'Answers',
+      value: '',
+      isCorrect: false,
     },
   ],
 }];

@@ -17,11 +17,10 @@ const QuizElement = () => {
   const onQuizComplete = (data: string[]) => {
     setQuizResults(data);
   };
-  console.log({ params, quizElement, quizzes });
-  const handleDeleteQuiz = () => {
+  const handleDeleteQuiz = async () => {
     if (window.confirm('Are you sure you want to delete this quiz?')) {
       try {
-        deleteQuiz(params?.quizIda || '-1');
+        await deleteQuiz(params?.quizId || '-1');
         navigate('/quiz');
       } catch (e) {
         console.log(e);

@@ -25,7 +25,6 @@ const QuizEditPage = () => {
   const { editQuiz, isLoading, error, quizzes } = useQuizContext();
   const params = useParams();
   const quizElement = quizzes && quizzes.find((quiz) => quiz.id === params?.quizId || '');
-  console.log(quizElement);
   const [deleteError, setDeleteError] = useState<boolean | string>(false);
   const [errors, setErrors] = useState<{ path: string & number[], message: string }[]>([]);
   const [editConfig, setEditConfig] = useState<FormConfigType[]>([]);
@@ -48,7 +47,7 @@ const QuizEditPage = () => {
       setEditConfig(generateQuizEditConfig(quizElement.questions!));
     }
   }, [quizElement]);
-  console.log(editConfig);
+
   const quizDataHandler = (question: QuestionType, question_id: string) => {
     setQuizData((state) => {
       const existingQuestion = state.questions.find((qst) => qst.question_id === question_id);

@@ -4,8 +4,7 @@ import { cn } from '@/utils/helpers';
 type BaseRadioProps = InputHTMLAttributes<HTMLInputElement>
 
 
-const BaseRadio = forwardRef<HTMLInputElement, BaseRadioProps>(({ type, value, checked, ...rest }, ref) => {
-  console.log(checked);
+const BaseRadio = forwardRef<HTMLInputElement, BaseRadioProps>(({ value, checked, ...rest }, ref) => {
   return (<label className="flex justify-between">
     <span>{value}</span>
     <span className={cn(checked ? 'w-6 h-6 rounded-full bg-orange-400' : 'w-6 h-6 rounded-full bg-purple-300')}></span>
